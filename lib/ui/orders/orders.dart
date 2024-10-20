@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoe_store_bloc/mock_data/order_list.dart';
+import 'package:shoe_store_bloc/widgets/helpers/order_card.dart';
 
-import '../../mock_data/product_list.dart';
-import '../../widgets/helpers/order_card.dart';
 import '../../widgets/text/shaded_text.dart';
 
 class OrdersScreen extends StatelessWidget {
@@ -20,20 +20,28 @@ class OrdersScreen extends StatelessWidget {
         title: ShadedText(
           text: 'My Orders',
           color: Colors.black,
-          size: 20,
+          size: 15,
         ),
       ),
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-              itemCount: listOfShoes.length,
-                itemBuilder: (context,index ){
-                  return OrderCard(
-                    product: listOfShoes[index],);
-                }),
-          ),
-
+              child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    //This ListView will talk with the OrderBloc in future. for now we use a mock list
+                    final order = listOfOrders[index];
+                    return OrderCard(order: order);
+                  },
+                  separatorBuilder: (context, _) {
+                    return const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Divider(
+                        thickness: 0.2,
+                        color: Colors.greenAccent,
+                      ),
+                    );
+                  },
+                  itemCount: listOfOrders.length)),
         ],
       ),
     );

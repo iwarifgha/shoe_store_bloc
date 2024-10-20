@@ -4,7 +4,7 @@ import '../helpers/enums.dart';
 import '../model/shoe_model.dart';
 
 final listOfShoes = [
-  SmartBoot(
+  Product(
       name: 'Shrek',
       type: ShoeCategory.alien,
       description: 'Feel like the green man with this awesome footwear',
@@ -14,7 +14,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'The Terminator',
       type: ShoeCategory.alien,
       description: 'Feel like the green man with this awesome footwear',
@@ -24,7 +24,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'Toy Story',
       type: ShoeCategory.alien,
       description: 'Feel like the green man with this awesome footwear',
@@ -34,7 +34,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'Space Odyssey',
       type: ShoeCategory.alien,
       description: 'Feel like the green man with this awesome footwear',
@@ -44,7 +44,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'The Matrix',
       type: ShoeCategory.ai,
       description: 'Feel like the green man with this awesome footwear',
@@ -54,7 +54,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'Kill Bill',
       type: ShoeCategory.ai,
       description: 'Feel like the green man with this awesome footwear',
@@ -64,7 +64,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'The Pirate',
       type: ShoeCategory.alien,
       description: 'The perfect leg for that expedition. Complete with the deadly Pirate package',
@@ -74,7 +74,7 @@ final listOfShoes = [
       dangerLevel: DangerLevel.low,
       size: '45'
   ),
-  SmartBoot(
+  Product(
       name: 'James Bond',
       type: ShoeCategory.alien,
       description: 'Feel like the Bond with this awesome footwear. Complete with the Bond mannerisms, reflexes and intelligience.'
@@ -87,4 +87,3 @@ final listOfShoes = [
       size: '45'
   ),
 ];
-final List<SmartBoot> orders = [];

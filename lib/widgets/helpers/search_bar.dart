@@ -7,7 +7,6 @@ class ShoeStoreSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final focusNode = FocusNode();
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: SearchBar(

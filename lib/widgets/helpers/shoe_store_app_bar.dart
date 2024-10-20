@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../ui/orders/orders.dart';
+import '../../ui/cart/cart.dart';
 import 'cart.dart';
 
 class ShoeStoreAppBar extends StatelessWidget {
@@ -36,7 +36,7 @@ class ShoeStoreAppBar extends StatelessWidget {
             GestureDetector(
               onTap: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                  return const OrdersScreen();
+                  return CartScreen();
                 }));
               },
               child: const CartWidget()

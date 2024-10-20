@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoe_store_bloc/controller/bloc/home_bloc/home_bloc.dart';
 import 'package:shoe_store_bloc/controller/bloc/home_bloc/home_states.dart';
-import 'package:shoe_store_bloc/start_point.dart';
+import 'package:shoe_store_bloc/app_base.dart';
 import 'package:shoe_store_bloc/ui/auth/login.dart';
 import 'package:shoe_store_bloc/ui/product/details.dart';
 
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
     return BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           if(state is HomePageState){
-            return const StartPoint();
+            return const AppBase();
           }
           if(state is AuthState){
             return const LoginScreen();

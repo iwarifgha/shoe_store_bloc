@@ -1,4 +1,4 @@
-class SmartBoot {
+class Product {
   final String name;
   final Enum type;
   final String description;
@@ -9,7 +9,7 @@ class SmartBoot {
   final Enum dangerLevel;
 
 
-  SmartBoot({
+  Product({
     required this.intelligence,
     required this.dangerLevel,
     required this.price,

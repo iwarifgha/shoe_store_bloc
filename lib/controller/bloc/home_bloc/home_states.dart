@@ -23,7 +23,7 @@ class InitialState extends HomeState {
 
 class HomePageState extends HomeState {
   const HomePageState({required this.products, });
-  final List<SmartBoot> products;
+  final List<Product> products;
    @override
   // TODO: implement props
   List<Object?> get props => [products,];

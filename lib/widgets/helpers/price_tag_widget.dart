@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Price extends StatelessWidget {
-  const Price({super.key, required this.price});
+  const Price({super.key, required this.price, this.fontSize});
 
   final String price;
+  final double? fontSize;
   @override
   Widget build(BuildContext context) {
     return  RichText(
@@ -17,10 +18,10 @@ class Price extends StatelessWidget {
             children: [
               TextSpan(
                   text: price,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Courier',
-                    fontSize: 19,
+                    fontSize: fontSize ?? 19,
                     color: Colors.black,
                   )
               )

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoe_store_bloc/controller/bloc/home_bloc/home_events.dart';
-import 'package:shoe_store_bloc/controller/bloc/search_bloc/search_bloc.dart';
 import 'package:shoe_store_bloc/mock_data/product_list.dart';
 import 'package:shoe_store_bloc/ui/product/details.dart';
 import '../../controller/bloc/home_bloc/home_bloc.dart';
@@ -16,13 +15,14 @@ class HomeScreen extends StatelessWidget {
 
   final List<ShoeCategory> categories = [ShoeCategory.ai, ShoeCategory.alien];
 
-  //final bool isFiltered;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final itemHeight = size.height / 2.5;
     final itemWidth = size.width / 2;
+    FocusScope.of(context).unfocus();
+
     return NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
       return [

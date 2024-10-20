@@ -12,12 +12,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState>{
     on<HomeLoadedEvent>((event, emit){
       emit (HomePageState(products: products));
     });
-
     on<AddFilterEvent>(_onFilterAdded);
     on<RemoveFilterEvent>(_onFilterRemoved);
   }
 
-  List<SmartBoot> products = listOfShoes;
+  List<Product> products = listOfShoes;
   List<ShoeCategory> categoryList = [];
 
 
@@ -42,7 +41,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState>{
     categoryList.removeWhere((c) => c == category);
   }
 
-  List<SmartBoot> _filterShoes(){
+  ///This method returns a list of product if their type are contained in categorylist
+  List<Product> _filterShoes(){
     final filtered = products.where((product) {
       return categoryList.isEmpty || categoryList.contains(product.type);
     }).toList();

@@ -12,7 +12,7 @@ class ShoeStoreProductCard extends StatelessWidget {
     required this.onTap
   });
 
-  final SmartBoot product;
+  final Product product;
   final VoidCallback onTap;
 
   @override

@@ -10,7 +10,7 @@ import '../../widgets/text/shaded_text.dart';
 class DetailsScreen extends StatefulWidget {
     const DetailsScreen({super.key, required this.product});
 
-  final SmartBoot product;
+  final Product product;
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();

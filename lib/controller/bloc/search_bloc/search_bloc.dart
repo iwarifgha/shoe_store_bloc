@@ -12,7 +12,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState>{
     on<SearchProductEvent>(_onProductSearched);
   }
 
-  List<SmartBoot> products = listOfShoes;
+  List<Product> products = listOfShoes;
 
   _onProductSearched(SearchProductEvent event, Emitter<SearchState> emit){
     final result = _searchProducts(event.searchWord);

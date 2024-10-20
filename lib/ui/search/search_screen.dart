@@ -32,8 +32,7 @@ class SearchScreen extends StatelessWidget {
                       autofocus: true,
                       controller: searchController,
                       onChanged: (text){
-                        print('Something changed');
-                        context.read<SearchBloc>().add(SearchProductEvent(searchWord: text));
+                         context.read<SearchBloc>().add(SearchProductEvent(searchWord: text));
                         },
                       //onTap: ,
                     ),
